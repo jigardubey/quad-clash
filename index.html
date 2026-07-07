@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>QUAD CLASH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main Menu: Yahan games ki list dikhegi -->
+    <div id="main-menu">
+        <h1>🎮 QUAD CLASH 🎮</h1>
+        <p>Select a mini-game to play with friends:</p>
+        
+        <div class="game-list">
+            <!-- Game 1: Mecha Tank -->
+            <div class="game-card" onclick="openLobby('tank-game')">
+                <div class="game-icon">🚀</div>
+                <h3>Mecha Tank Fight</h3>
+            </div>
+            
+            <!-- Game 2: Car Race -->
+            <div class="game-card" onclick="openLobby('race-game')">
+                <div class="game-icon">🏎️</div>
+                <h3>Chameleon Race</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lobby Screen: Create/Join Room Pop-up -->
+    <div id="lobby-screen" class="hidden">
+        <h2 id="selected-game-title">Game Lobby</h2>
+        
+        <div class="lobby-actions">
+            <button onclick="createRoom()">➕ Create Room</button>
+            <div class="join-box">
+                <input type="text" id="room-code-input" placeholder="Enter Room Code">
+                <button onclick="joinRoom()">🔌 Join Room</button>
+            </div>
+            <button class="back-btn" onclick="backToMenu()">⬅️ Back</button>
+        </div>
+    </div>
+
+    <!-- Yahan humne main.js ko link kar diya hai -->
+    <script src="main.js"></script>
+</body>
+</html>
